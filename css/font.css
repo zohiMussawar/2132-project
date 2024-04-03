@@ -1,0 +1,10 @@
+
+/* a font face for headings */
+@font-face {
+    font-family: 'leaguespartan-bold-webfont';
+    src: url('../font/MadimiOne-Regular.ttf') format('ttf');
+         
+    font-weight: normal;
+    font-style: normal;
+}
+/* a font face for block text */

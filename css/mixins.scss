@@ -1,0 +1,20 @@
+/*
+SASS mxins
+-----------------------------------------
+are groups of styles that can be applied to more than one element
+unlike a .class, which can also be applied to more than one element,
+a mixin will accept arguments, known as parameters, which allow
+the styles to be customized with each application
+
+step 1:
+define a mixin
+    @mixin nameOfMixin( $param01, $param02, $param03 ){
+        //add css rules that use the $parameter data, eg
+        property:$param01;
+    }
+*/
+@mixin rounded-shaded-box($xoffset, $yoffset, $rounded-corners, $border-color){
+    box-shadow:$xoffset $yoffset 10px #b2aeae;	  
+    border-radius:$rounded-corners;    
+    border:3px solid $border-color;    
+}
