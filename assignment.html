@@ -13,7 +13,6 @@
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <script src="Script/jquery-3.7.0.min.js" defer></script>
         <script src="Script/project.js" defer></script>
-         
      </head>
      <body>
         <div id="wrapper">
@@ -21,18 +20,14 @@
             <a class="logo">
                 <img src="images/dice-logo.jpg" alt="Inc Logo" />
               </a>
-               <a class="logo1">Dice Roll Game!!</a>
-           
-          
+               <a class="logo1">Dice Roll Game</a>
             <input type="checkbox" id="check">
-            
             <label for="check" class="icons">
                 <i class='bx bx-menu' id="menu-icon"></i>
                 <i class='bx bx-x' id="close-icon"></i></label>
             <nav class="navbar">
                 <div class="accordion-container accordion-container-01">
                     <h1 class="tab" style="--i:0;" >How to play</h1>
-                    
                     <div class="content1"  style="color: white;">
                             <ul><li>To start, click the 'Roll Dice' button</li>
                             <li>To advance to the near round, click the 'Roll Dice' button again</li>
@@ -42,8 +37,7 @@
                          </div><!-- end content -->
                 </div>
                 <div class="accordion-container accordion-container-02">
-                    <h2 class="tab" style="--i:1;">Rules</h2>
-                    
+                    <h2 class="tab" style="--i:1;">Rules</h2>  
                    <div class="content1" style="color: white;">
                         <ul><li>Each round, you and the computer both roll a pair of dice.</li>
                             <li>Your score for the round will be based on the sum of the dice.</li>
@@ -53,14 +47,9 @@
                         </ul>
                          </div><!-- end content -->
                 </div>
-                 
-             
             </nav>
         </header>
-      <br><br><br><br><br>
-     
-    <main>
-                
+    <main>       
                 <section id='pop-up'>
                     <div>
                         <button id="btn-close">&#x2715;</button>
@@ -74,8 +63,10 @@
             <section>
                 <div class="dice-area">
                     <p>YOU</p>
+                    <section>
                     <img id="1" src=""  alt="" style="margin: 4px 5px;"/>
                     <img  src="" id="2" alt="" style="margin: 4px 5px;"/>
+                </section>
                     <div id="totalScore">
                         <section>  <h4>Your Score</h4></section>
                         <section>   
@@ -88,8 +79,11 @@
             <section>
                 <div class="dice-area">
                     <p>Player</p>
-                    <img src="" id="3" alt="" style="margin: 4px 5px;"/>
-                    <img src="" id="4" alt="" style="margin: 4px 5px;"/>
+                    <section>
+                        <img src="" id="3" alt="" style="margin: 4px 5px;"/>
+                        <img src="" id="4" alt="" style="margin: 4px 5px;"/>
+                    </section>
+                   
                     <div id="totalScore">
                         <section> <h4>Oponent Score</h4></section>
                         <section>   
@@ -110,8 +104,9 @@
         </div>
             
             
-            <!-- </div> -->
+           
              </main>
+        </div>
      </body>
    
 </html>

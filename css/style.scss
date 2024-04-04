@@ -17,28 +17,12 @@ h1, h2, h3, h4, h5, h6{
     font-family: 'MadimiOne-Regular';
     letter-spacing:1px;
 }
-.btn{
- 
-  @include rounded-shaded-box(8px, 8px, 8px, rgb(190, 38, 38));
-  padding: 0;
-  color: rgb(245, 245, 245);
-  font-weight: 1000;
-  font-size: large;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  margin: 0;
-  width: 250px;
-  height: 100px;
-  text-align: center;
-  // top: 20px;
-  // left: 40px;
-  position: relative;
-  border: 3px solid #555;
-  border-radius: 26px;
-  transition-duration: 60s;
-  background-image: url('../images/button.png');
-  background-size: cover;
+h2{
+  text-align: left;
+  margin:20px 20px;
 }
 
+// styling header
 .header{
   position: fixed;
   top: 0;
@@ -61,12 +45,6 @@ h1, h2, h3, h4, h5, h6{
   backdrop-filter: blur(50px);
   z-index: -1;
 }
-// .logo{
-//   font-size: 2rem;
-//   color: #fff;
-//   text-decoration: none;
-//   font-weight: 700;
-// }
 .navbar a {
   font-size: 1.15rem;
   color: #fff;
@@ -82,6 +60,49 @@ h1, h2, h3, h4, h5, h6{
   display: none;
 
 }
+//  To set the body background image
+body {
+  background-image:url('../images/back.jpg');
+  background-repeat: no-repeat;
+  background-size: 220vh;
+  background-position: center;
+    align-items: center;
+    padding: 0em;
+   margin: 0;
+  }
+// First div element to set the dice aren in a column format
+  #wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+// new game and roll a dice buttons
+.btn{
+//  include mixin 
+  @include rounded-shaded-box(8px, 8px, 8px, rgb(190, 38, 38));
+  padding: 0;
+  color: rgb(245, 245, 245);
+  font-weight: 1000;
+  font-size: large;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin: 0;
+  width: 250px;
+  height: 100px;
+  text-align: center;
+  position: relative;
+  border: 3px solid #555;
+  border-radius: 26px;
+  transition-duration: 60s;
+  background-image: url('../images/button.png');
+  background-size: cover;
+}
+
+
+
+
 @media(max-width:800px){
   .header{
     padding: 1.3rem 5%;
@@ -108,28 +129,8 @@ h1, h2, h3, h4, h5, h6{
     text-align: center;
   }
 }
-body {
-  /* background-image: url(`images/back.jpg`); */
-  background-image:url('../images/back.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-    align-items: center;
-    /* background: #d32c2c; */
-    padding: 0em;
-    
-   margin: 0;
-  }
 
 
-#wrapper {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
 
 .dice-area{
   margin: 0px 50px;
@@ -137,6 +138,7 @@ body {
   display: inline-block;
 }
 p{
+  margin:25px 30px;
   font-size: 2.5rem;
   color: rgb(255, 255, 255);
 }
@@ -148,15 +150,8 @@ p{
   border-radius:90px;                
 }
 
-h2{
-    text-align: left;
-    margin:20px 20px;
-   /* text-decoration: underline; */
-}
 
-p{
-    margin:25px 30px;
-}
+
 #decoration{
   /* text-decoration: underline; */
   background-color: aquamarine;
@@ -250,7 +245,7 @@ b{
   // @include rounded-shaded-box(20px, 20px, 20px, rgb(246, 239, 239));
   z-index: 2;
   position: absolute;
-  margin: center;
+  // margin: center;
   top: 35%;
   left: 25%;
   right: 15%;
@@ -262,6 +257,11 @@ b{
   // -webkit-backdrop-filter: blur(50px);
   // backdrop-filter: blur(50px);
   grid-area: auto;
+  }
+  @media (max-width: 1050px) {
+    body{
+      background-size: 200vh;
+    }
   }
   @media (max-width: 760px) {
     #wrapper {
