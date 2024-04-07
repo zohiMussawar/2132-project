@@ -91,6 +91,7 @@ else if(ThirdRandomNum!=ForthRandomNum){
 // Total value of player1
 PlayerValue2.innerHTML=playerStoredValue2;
 if(counter==3){
+
   setTimeout( function(){
     //but dont show pop up if user has already started the animation
     
@@ -104,14 +105,16 @@ if(counter==3){
     rollButton.disabled = true;
 }
 if(playerStoredValue1>playerStoredValue2){
+ 
   img5.src= 'images/happy.gif';
-//  winner.innerHTML='The winner is player one';
+ winner.innerHTML='Game Over';
  $('#ShowPlayerMess').text('Congratulation You Won the Game!!!');
 }
 else{
+  
   img5.src= 'images/sad.gif';
-    // winner.innerHTML=`The winner is player two`;
-    $('#ShowPlayerMess').text('Ohhhhh NO \n You loss the Game!!!');
+    winner.innerHTML=`Game Over`;
+    $('#ShowPlayerMess').text(`Oh NO You loss the Game!!!`);
 }
 });
 // Start a new game 
@@ -127,18 +130,6 @@ const popUp = document.getElementById("pop-up");
 //three second delay before popup
 const delay = 1000; 
 
-//track if he user has already started the animation
-//dont show the popup if they have
-//also used to ensure consecutive clicks on the 
-//start button wont run recursive calls to requestAnimationFrame()
-// let needToShowPopup = true;
-// let userHasNotStartedAnimationYet = true;
-
-/*
-Assignment BONUS
-----------------------------
-need a handler for this animation
-*/
 let popupAnimationHandler;
 /*
 track the opacity from 0-1
@@ -147,8 +138,6 @@ transparent - opaque
 let opacityValue = 0;
 
 // Click "Congratulations!" to play animation
-
-
 
 function fadeIn(){
     opacityValue = opacityValue + .05;
